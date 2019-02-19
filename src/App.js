@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
 import NavBar from './NavBar';
+import Home from './Home';
+import About from './About';
+import Images from './Images';
+// import Weather from './Weather';
+import MayorMessage from './MayorMessage';
 
 import {
     BrowserRouter as Router, 
-    // Route, 
+    Route, 
     // Link
 } from 'react-router-dom';
 
@@ -18,11 +23,24 @@ class App extends Component {
   render() {
     return (
         <Router>
-            <div>
+            <div className='main'>
                 <NavBar />
-                <div>
-                    <h1>Main App</h1>
+                <div className='title'>
+                    <h1>Class Exerxise for React Router</h1>
                 </div>
+
+                <Route path='/' exact component={Home} />
+                <Route path='/about' component={About} />
+                <Route path='/images' render={(props) => {
+                    return (
+                        <Images 
+                            imageGallery = {atlImages} 
+                        />
+                    )
+                }} />
+
+                {/* <Route path='/weather' component={Weather} /> */}
+                <Route path='/mayormessage' component={MayorMessage} />
             </div>
         </Router>
       

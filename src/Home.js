@@ -1,5 +1,9 @@
-function Home(props){
+import React from 'react';
+
+const Home = (props) => {
 	return (
-		<h1>A page about Atlanta!</h1>
+		<h2>A page about Atlanta!</h2>
 	)
 }
+
+export default Home;
