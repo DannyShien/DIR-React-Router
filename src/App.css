@@ -10,8 +10,11 @@ body {
     font-size: 20px;
     /* text-rendering: optimizeLegibility; */
 }
-
+/* ==== ====  NAVBAR COMPONENT ==== ==== */
 .main {
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
     height: 100vh;
     background-color: aliceblue;
 }
@@ -24,16 +27,19 @@ nav {
     justify-content: space-between;
     align-items: center;
     height: 50px;
-    background-color: rgba(206, 227, 245, 0.6); 
+    width: 100%;
+    background-color: rgba(202, 202, 202, 0.6); 
 }
 .logo-text {
     margin-left: 15px; 
 }
 h1 {
-    font-size: 120%; 
+    font-size: 130%; 
+    font-weight: 400;
 }
 h2 {
     font-size: 110%;
+    /* font-weight: 400; */
     text-align: center;
 }
 ul {
@@ -42,6 +48,8 @@ ul {
     margin-right: 15px; 
     width: 40%;
     text-decoration: none;
+    font-size: 90%;
+    font-weight: 400;   
 }
 li {
     list-style-type: none;
@@ -49,8 +57,29 @@ li {
 }
 a {
     text-decoration: none;
+    /* font-size: 90%; */
 }
 
+/* ==== ====  ABOUT COMPONENT  ==== ==== */
+.about {
+    display: flex;
+    /* justify-content: center; */
+    width: 60%;
+    padding: 10px; 
+    background-color: rgb(226, 226, 226);
+    border: 3px solid white; 
+    border-style: groove; 
+}
+.about p {
+    text-align: center;
+    padding: 5px; 
+    line-height: 120%;
+    font-size: 130%;
+    /* letter-spacing: 0.5px; */
+    word-spacing: 2px; 
+}
+
+/* ==== ====  IMAGE COMPONENT  ==== ==== */
 .images {
     display: flex; 
     justify-content: space-around;
@@ -62,4 +91,31 @@ img {
     height: 250px;
     margin: 6px;
 
+}
+
+/* ==== ==== WEATHER COMPONENT  ==== ==== */
+.weather {
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+}
+.weather h1 {
+    margin-bottom: 5px; 
+}
+.weather-display {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    justify-content: center; 
+    align-items: center; 
+    background-color: rgb(216, 238, 252);
+    width: 200px; 
+    height: 120px;
+    border: 3px solid rgb(170, 222, 255);
+    border-style: groove; 
+
+}
+/* ==== ==== MAYOR MESSAGE  ==== ==== */
+.message {
+    height: 0;
 }

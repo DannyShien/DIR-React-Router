@@ -19,32 +19,38 @@ class Weather extends Component {
         .then(weatherData => {
             // console.log(weatherData.data);
             console.log(weatherData.data.main);
+            let  icon = (weatherData.data.weather[0].icon)
 
-            let temperature = ((weatherData.data.main.temp - 273.15) * 9/5 + 32).toFixed(1);
-            console.log(temperature);
+            let temperature = (weatherData.data.main.temp);
+            // console.log(temperature);
 
-            let minTemp = ((weatherData.data.main.temp_min - 273.15) * 9/5 + 32).toFixed(1);
-            console.log(minTemp);
+            let minTemp = (weatherData.data.main.temp_min);
+            // console.log(minTemp);
 
-            let maxTemp = ((weatherData.data.main.temp_max - 273.15) * 9/5 + 32).toFixed(1);
-            console.log(maxTemp);
+            let maxTemp = (weatherData.data.main.temp_max);
+            // console.log(maxTemp);
+
+            let desc = (weatherData.data.weather[0].description)
 
             this.setState({
+                icon: icon,
                 temp: temperature,
                 temp_min: minTemp,
-                temp_max: maxTemp
+                temp_max: maxTemp,
+                desc: desc
             })
         });
 	}
 
 	render(){
 		return(
-			<div>
+			<div className='weather'>
 				<h1>Real-time Atlanta Weather!</h1>
-                <div>
-                    The main temp is : {temp}
-                    {minTemp}
-                    {maxTemp}
+                <div className='weather-display'>
+                    <p>Temp: {this.state.temp}°</p>
+                    <p>Min: {this.state.temp_min}°</p>
+                    <p>Max: {this.state.temp_max}°</p>
+                    <p>Desc: {this.state.desc}</p>
                 </div>
 			</div>
 		);
