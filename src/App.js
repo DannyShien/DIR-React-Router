@@ -4,7 +4,7 @@ import NavBar from './NavBar';
 import Home from './Home';
 import About from './About';
 import Images from './Images';
-// import Weather from './Weather';
+import Weather from './Weather';
 import MayorMessage from './MayorMessage';
 
 import {
@@ -39,7 +39,7 @@ class App extends Component {
                     )
                 }} />
 
-                {/* <Route path='/weather' component={Weather} /> */}
+                <Route path='/weather' component={Weather} />
                 <Route path='/mayormessage' component={MayorMessage} />
             </div>
         </Router>
